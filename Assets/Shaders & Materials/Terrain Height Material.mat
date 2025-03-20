@@ -49,7 +49,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BrushSize: 9.84
     - _HeightMultipliar: 3
+    - _Max_Brush_Size: 4
     - _NoiseScale: 8
     - _Normal_Power: 1.5
     - _QueueControl: 0
@@ -59,6 +61,7 @@ Material:
     - _USERANDOM: 0
     - _USE_HEIGHT_COLOR: 0
     m_Colors:
+    - _BrushPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _NoiseOffset: {r: 0, g: 0, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
