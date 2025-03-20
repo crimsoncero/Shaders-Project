@@ -26,8 +26,21 @@ public class TerrainModifier : MonoBehaviour
 
     private void Start()
     {
-        _heightTexture = (Texture2D)_material.GetTexture("_HeightTex");
-        _colorTexture = (Texture2D)_material.GetTexture("_ColorTex");
+       var originalHeight = (Texture2D)_material.GetTexture("_HeightTex");
+       var originalColor = (Texture2D)_material.GetTexture("_ColorTex");
+       
+       _heightTexture = new Texture2D(originalHeight.width, originalHeight.height, TextureFormat.RGBA32, false);
+       _colorTexture = new Texture2D(originalColor.width, originalColor.height, TextureFormat.RGBA32, false);
+       
+       _heightTexture.SetPixels32(originalHeight.GetPixels32());
+       _colorTexture.SetPixels32(originalColor.GetPixels32());
+       
+       _heightTexture.Apply();
+       _colorTexture.Apply();
+       
+       _material.SetTexture("_HeightTex", _heightTexture);
+       _material.SetTexture("_ColorTex", _colorTexture);
+       
     }
 
     public void OnPaint()

@@ -498,8 +498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: fba536c3f8d68e946ae9faacba50569d, type: 2}
-  _brushRadius: 100
-  _heightChange: 0.5
+  _brushRadius: 10
+  _heightChange: 0.1
   <BrushMode>k__BackingField: 0
 --- !u!1 &677469993
 GameObject:
