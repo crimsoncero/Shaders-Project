@@ -105,5 +105,29 @@ public class PlayerController : MonoBehaviour
             _isControllingCamera = false;
         }
     }
+
+    public void OnBrushModeIncrease(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.HeightIncrease;
+    }
+    
+    public void OnBrushModeDecrease(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.HeightDecrease;
+    }
+    
+    public void OnBrushModeColor1(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.ColorOne;
+    }
+    
+    public void OnBrushModeColor2(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.ColorTwo;
+    }
+    public void OnBrushModeColor3(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.ColorThree;
+    }
     
 }

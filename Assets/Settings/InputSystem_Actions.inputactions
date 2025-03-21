@@ -58,6 +58,51 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Select Height Increase",
+                    "type": "Button",
+                    "id": "b8492567-5d85-4286-acbe-652856e7f3f1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select Height Decrease",
+                    "type": "Button",
+                    "id": "1494511f-dd8e-4613-8035-22dcaf3fb39c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select Color 1",
+                    "type": "Button",
+                    "id": "6d73cb12-5fbd-482c-a256-6b54ac74535e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select Color 2",
+                    "type": "Button",
+                    "id": "9e135477-c190-4ccd-8446-ee9c91850301",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select Color 3",
+                    "type": "Button",
+                    "id": "504a78a0-2fd0-4bbd-96b2-97331f6890da",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -322,6 +367,61 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Move Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "750a5a29-f7dd-4b02-97ad-882ed65fe8ed",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Height Increase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5e226ca-43a2-4b94-8aa8-753d0e21320d",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Height Decrease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34d0ca83-71f2-4eb0-91bc-f6e975e3c409",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Color 1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc8ba4c3-7581-4762-985b-991393368575",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Color 2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "115aea3a-a869-4864-b329-41cb74190dc6",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Color 3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
