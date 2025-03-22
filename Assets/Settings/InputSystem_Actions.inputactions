@@ -103,6 +103,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Select Color 4",
+                    "type": "Button",
+                    "id": "dc7cecd7-df1e-4041-a728-1196baeb0cad",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select Color 5",
+                    "type": "Button",
+                    "id": "ae39c390-974e-4843-a244-76438ec17603",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select Color 6",
+                    "type": "Button",
+                    "id": "d32df395-d5aa-486d-8770-4f399bc74bcf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -398,7 +425,7 @@
                     "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Select Color 1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -409,7 +436,7 @@
                     "path": "<Keyboard>/4",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Select Color 2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -422,6 +449,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Select Color 3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a30d64c3-561a-4204-8c7f-4461587a2b4c",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Select Color 4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37d37ba7-ddbe-446f-bee9-4534bf2e66b4",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Select Color 5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f594ba4e-410d-44ff-8887-4cef22ef2b13",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Select Color 6",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
