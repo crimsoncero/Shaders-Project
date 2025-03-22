@@ -10,13 +10,16 @@ public enum BrushModeEnum
     ColorOne,
     ColorTwo,
     ColorThree,
+    ColorFour,
+    ColorFive,
+    ColorSix,
 }
 
 public class TerrainModifier : MonoBehaviour
 {
     [SerializeField] private Material _material;
     [SerializeField] private MeshRenderer _meshRenderer;
-    
+    [SerializeField] private LayerMask _terrainLayer;
     [Header("Brush Settings")]
     [SerializeField] private int _brushRadius = 10;
     [SerializeField, Range(0, 100)] private int _heightChange = 5;
@@ -24,6 +27,9 @@ public class TerrainModifier : MonoBehaviour
     [SerializeField] private Color _colorOne = Color.white;
     [SerializeField] private Color _colorTwo = Color.green;
     [SerializeField] private Color _colorThree = Color.blue;
+    [SerializeField] private Color _colorFour = Color.red;
+    [SerializeField] private Color _colorFive = Color.yellow;
+    [SerializeField] private Color _colorSix = Color.cyan;
     
     
     
@@ -61,8 +67,8 @@ public class TerrainModifier : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
-        if (Physics.Raycast(ray, out hit))
+        
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, _terrainLayer))
         {
             Vector2 uv = hit.textureCoord;
 
@@ -82,6 +88,15 @@ public class TerrainModifier : MonoBehaviour
                     break;
                 case BrushModeEnum.ColorThree:
                     OnColorChange(uv, _colorThree);
+                    break;
+                case BrushModeEnum.ColorFour:
+                    OnColorChange(uv, _colorFour);
+                    break;
+                case BrushModeEnum.ColorFive:
+                    OnColorChange(uv, _colorFive);
+                    break;
+                case BrushModeEnum.ColorSix:
+                    OnColorChange(uv, _colorSix);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -107,11 +122,13 @@ public class TerrainModifier : MonoBehaviour
             // Skip if out of bounds
             if(i < 0 || i > _heightTexture.width) continue;
             
-            for (int j = -_brushRadius / 2; j < _brushRadius / 2; j++)
+            for (int j = -_brushRadius; j < _brushRadius; j++)
             {
                 // Skip if out of bounds
                 if(j < 0 || j > _heightTexture.height) continue;
                 
+                
+
                 
                 var pixel = _heightTexture.GetPixel((int)pixelPos.x + i, (int)pixelPos.y + j);
                 pixel.r = Mathf.Clamp(pixel.r + change, 0, 1);
@@ -129,16 +146,18 @@ public class TerrainModifier : MonoBehaviour
     {
         Vector2 pixelPos = UVToPixel(uvPos, _colorTexture);
        
-        for (int i = -_brushRadius / 2; i < _brushRadius / 2; i++)
+        for (int i = -_brushRadius; i < _brushRadius; i++)
         {
             // Skip if out of bounds
             if(i < 0 || i > _colorTexture.width) continue;
             
-            for (int j = -_brushRadius / 2; j < _brushRadius / 2; j++)
+            for (int j = -_brushRadius; j < _brushRadius; j++)
             {
                 // Skip if out of bounds
                 if(j < 0 || j > _colorTexture.height) continue;
+
                 
+
                 _colorTexture.SetPixel((int)pixelPos.x + i, (int)pixelPos.y + j, color);
             }
         }
@@ -207,7 +226,7 @@ public class TerrainModifier : MonoBehaviour
     // Get the color matching the number
     public Color GetColor(int colorNumber)
     {
-        if (colorNumber < 1 || colorNumber > 3)
+        if (colorNumber < 1 || colorNumber > 6)
         {
             Debug.LogError("Out of bounds color number");
             throw new ArgumentOutOfRangeException("colorNumber");
@@ -221,6 +240,12 @@ public class TerrainModifier : MonoBehaviour
                 return _colorTwo;
             case 3:
                 return _colorThree;
+            case 4:
+                return _colorFour;
+            case 5:
+                return _colorFive;
+            case 6:
+                return _colorSix;
         }
 
         return _colorOne;

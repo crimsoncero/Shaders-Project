@@ -129,5 +129,16 @@ public class PlayerController : MonoBehaviour
     {
         _terrainModifier.BrushMode = BrushModeEnum.ColorThree;
     }
-    
+    public void OnBrushModeColor4(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.ColorFour;
+    }
+    public void OnBrushModeColor5(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.ColorFive;
+    }
+    public void OnBrushModeColor6(InputAction.CallbackContext context)
+    {
+        _terrainModifier.BrushMode = BrushModeEnum.ColorSix;
+    }
 }
