@@ -915,8 +915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2a1df966bea4d49b8cf68a626c4129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainComparison: {fileID: 1475603680}
-  difficultyDropdown: {fileID: 1033046413}
+  _shaderController: {fileID: 957077285}
+  _difficultyDropdown: {fileID: 1033046413}
 --- !u!4 &686271361
 Transform:
   m_ObjectHideFlags: 0
@@ -1328,10 +1328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388b635f04b78e045a7f875ed3f0b1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comparisonMaterial: {fileID: 2100000, guid: 7fdf8d8a6fd4a2443ba1cb7b0865380c, type: 2}
-  terrainModifier: {fileID: 525709180}
-  targetHeightMap: {fileID: 2800000, guid: 203883de07772b748816f0733fb5753f, type: 3}
-  targetColorMap: {fileID: 2800000, guid: 9a90a45dd4413c54c8723a89dd5e2768, type: 3}
+  _comparisonMaterial: {fileID: 2100000, guid: 7fdf8d8a6fd4a2443ba1cb7b0865380c, type: 2}
+  _terrainModifier: {fileID: 525709180}
+  _targetHeightMap: {fileID: 2800000, guid: 203883de07772b748816f0733fb5753f, type: 3}
+  _targetColorMap: {fileID: 2800000, guid: 9a90a45dd4413c54c8723a89dd5e2768, type: 3}
+  _scoreText: {fileID: 1484340710}
 --- !u!1 &1017573187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,8 +3181,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475603680}
-        m_TargetAssemblyTypeName: TerrainComparison, Assembly-CSharp
+      - m_Target: {fileID: 957077285}
+        m_TargetAssemblyTypeName: ShaderController, Assembly-CSharp
         m_MethodName: CompareAndDisplayScore
         m_Mode: 1
         m_Arguments:
