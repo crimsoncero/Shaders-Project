@@ -379,6 +379,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &209086550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 209086552}
+  - component: {fileID: 209086551}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &209086551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209086550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33361053de867e941bee733cc6c969d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 1484340710}
+  _shaderController: {fileID: 957077285}
+--- !u!4 &209086552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209086550}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9644253, y: -0.48065662, z: -4.608881}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214634515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1378,6 @@ MonoBehaviour:
   _terrainModifier: {fileID: 525709180}
   _targetHeightMap: {fileID: 2800000, guid: 203883de07772b748816f0733fb5753f, type: 3}
   _targetColorMap: {fileID: 2800000, guid: 9a90a45dd4413c54c8723a89dd5e2768, type: 3}
-  _scoreText: {fileID: 1484340710}
 --- !u!1 &1017573187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +2009,7 @@ MonoBehaviour:
   _terrainModifier: {fileID: 525709180}
   _moveSpeed: 7.5
   _lookSpeed: 0.2
+  _UImanager: {fileID: 0}
   _isControllingCamera: 0
 --- !u!4 &1198487286
 Transform:
@@ -2496,56 +2542,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &1475603679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1475603681}
-  - component: {fileID: 1475603680}
-  m_Layer: 0
-  m_Name: TerrainComparison
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1475603680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475603679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0104b37be4a5045aa6e0aa67eda174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _terrainModifier: {fileID: 525709180}
-  _targetHeightMap: {fileID: 2800000, guid: 203883de07772b748816f0733fb5753f, type: 3}
-  _targetColorMap: {fileID: 2800000, guid: 9a90a45dd4413c54c8723a89dd5e2768, type: 3}
-  comparisonThreshold: 0.01
-  resolutionFactor: 1.5
-  scoreText: {fileID: 1484340710}
---- !u!4 &1475603681
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475603679}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 509.3333, y: 291.66666, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484340708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,8 +3177,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 957077285}
-        m_TargetAssemblyTypeName: ShaderController, Assembly-CSharp
+      - m_Target: {fileID: 209086551}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: CompareAndDisplayScore
         m_Mode: 1
         m_Arguments:
@@ -3376,5 +3372,5 @@ SceneRoots:
   - {fileID: 92564280}
   - {fileID: 897938417}
   - {fileID: 957077284}
-  - {fileID: 1475603681}
   - {fileID: 686271361}
+  - {fileID: 209086552}

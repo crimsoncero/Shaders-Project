@@ -9,7 +9,6 @@ public class ShaderController : MonoBehaviour
     [SerializeField] private TerrainModifier _terrainModifier;
     [SerializeField] private Texture2D _targetHeightMap;
     [SerializeField] private Texture2D _targetColorMap;
-    [SerializeField] private TMP_Text _scoreText;
 
     private void Start()
     {
@@ -28,14 +27,8 @@ public class ShaderController : MonoBehaviour
         _comparisonMaterial.SetTexture("_Target_ColorTex", _targetColorMap);
     }
 
-    public void CompareAndDisplayScore()
-    {
-        float score = CompareTerrains();
-        if (score > 1) score = 1;
-        else if (score < 0) score = 0;
-        _scoreText.text = "Score: " + (score * 100).ToString("F2") + "%";
-    }
-    private float CompareTerrains()
+    
+    public float CompareTerrains()
     {
         Texture2D playerHeightMap = _terrainModifier.GetHeightTexture();
         Texture2D playerColorMap = _terrainModifier.GetColorTexture();

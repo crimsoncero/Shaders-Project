@@ -5,21 +5,20 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [Header("Buttons")]
-    public Button compareShaderButton;
     public Button raiseTerrainButton;
     public Button lowerTerrainButton;
     public Button[] colorButtons;
     
     [Header("UI Texts")]
-    public TMP_Text compareShaderText;
-    
+    [SerializeField] private TMP_Text _scoreText;
+
     [Header("Player Controller Reference")]
     public PlayerController playerController; // Reference to your player controller that handles terrain behavior
 
+    [SerializeField] private ShaderController _shaderController;
     private void Start()
     {
         // Assign button click events
-        compareShaderButton.onClick.AddListener(CompareTerrain);
         raiseTerrainButton.onClick.AddListener(() => playerController.OnBrushModeIncrease(default));
         lowerTerrainButton.onClick.AddListener(() => playerController.OnBrushModeDecrease(default));
 
@@ -32,9 +31,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void CompareTerrain()
+    public void CompareAndDisplayScore()
     {
-     //   float similarity = playerController.GetComponent<TerrainModifier>().CompareTerrain(); // Calls existing compute shader function
-       // compareShaderText.text = "Similarity: " + (similarity * 100f).ToString("F2") + "%";
+        float score = _shaderController.CompareTerrains();
+        if (score > 1) score = 1;
+        else if (score < 0) score = 0;
+        _scoreText.text = "Score: " + (score * 100).ToString("F2") + "%";
     }
 }
