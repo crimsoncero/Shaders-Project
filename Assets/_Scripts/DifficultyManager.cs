@@ -18,10 +18,10 @@ public class DifficultyManager : MonoBehaviour
         switch (index)
         {
             case 0: // Easy
-                _shaderController.SetResolutionFactor(1.5f);
+                _shaderController.SetResolutionFactor(1f);
                 break;
             case 1: // Medium
-                _shaderController.SetResolutionFactor(1.0f);
+                _shaderController.SetResolutionFactor(0.8f);
                 break;
             case 2: // Hard
                 _shaderController.SetResolutionFactor(0.5f);
