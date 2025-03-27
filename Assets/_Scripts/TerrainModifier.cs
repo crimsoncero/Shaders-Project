@@ -20,6 +20,7 @@ public class TerrainModifier : MonoBehaviour
     [SerializeField] private Material _material;
     [SerializeField] private MeshRenderer _meshRenderer;
     [SerializeField] private LayerMask _terrainLayer;
+    [SerializeField] private ShaderController _shaderController;
     [Header("Brush Settings")]
     [SerializeField] private int _brushRadius = 10;
     [SerializeField, Range(0, 100)] private int _heightChange = 5;
@@ -140,6 +141,7 @@ public class TerrainModifier : MonoBehaviour
 
         _heightTexture.Apply();
 
+        _shaderController.SetTexture();
     }
 
     private void OnColorChange(Vector2 uvPos, Color color)
@@ -163,6 +165,8 @@ public class TerrainModifier : MonoBehaviour
         }
 
         _colorTexture.Apply();
+
+        _shaderController.SetTexture();
     }
     
     private Vector2 UVToPixel(Vector2 uvPos, Texture2D texture)
@@ -209,6 +213,8 @@ public class TerrainModifier : MonoBehaviour
 
         _material.SetTexture("_HeightTex", _heightTexture);
         _material.SetTexture("_ColorTex", _colorTexture);
+
+        _shaderController.SetTexture();
     }
 
     // Getter for the height texture currently used

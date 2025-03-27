@@ -30,8 +30,8 @@ public class ShaderController : MonoBehaviour
     
     public float CompareTerrains()
     {
-        Texture2D playerHeightMap = _terrainModifier.GetHeightTexture();
-        Texture2D playerColorMap = _terrainModifier.GetColorTexture();
+        Texture2D playerHeightMap = (Texture2D)_comparisonMaterial.GetTexture("_Player_HeightTex");
+        Texture2D playerColorMap = (Texture2D)_comparisonMaterial.GetTexture("_Player_ColorTex");
 
         if (playerHeightMap == null || playerColorMap == null) return 0f;
 
@@ -64,6 +64,12 @@ public class ShaderController : MonoBehaviour
         }
 
         return totalScore / totalPixels;
+    }
+
+    public void SetTexture()
+    {
+        _comparisonMaterial.SetTexture("_Player_HeightTex", _terrainModifier.GetHeightTexture());
+        _comparisonMaterial.SetTexture("_Player_ColorTex", _terrainModifier.GetColorTexture());
     }
 
     public void SetResolutionFactor(float factor)

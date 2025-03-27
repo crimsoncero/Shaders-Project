@@ -408,7 +408,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33361053de867e941bee733cc6c969d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raiseTerrainButton: {fileID: 0}
+  lowerTerrainButton: {fileID: 0}
+  colorButtons: []
   _scoreText: {fileID: 1484340710}
+  playerController: {fileID: 0}
   _shaderController: {fileID: 957077285}
 --- !u!4 &209086552
 Transform:
@@ -867,6 +871,7 @@ MonoBehaviour:
   _terrainLayer:
     serializedVersion: 2
     m_Bits: 8192
+  _shaderController: {fileID: 957077285}
   _brushRadius: 10
   _heightChange: 5
   _colorOne: {r: 1, g: 1, b: 1, a: 1}
@@ -1355,13 +1360,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957077280}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.13}
-  m_LocalScale: {x: 19.8, y: 19.8, z: 19.7}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 25}
+  m_LocalScale: {x: 10, y: 10, z: 9.949496}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &957077285
 MonoBehaviour:
   m_ObjectHideFlags: 0
