@@ -2527,7 +2527,7 @@ MonoBehaviour:
   _terrainModifier: {fileID: 525709180}
   _targetHeightMap: {fileID: 2800000, guid: 203883de07772b748816f0733fb5753f, type: 3}
   _targetColorMap: {fileID: 2800000, guid: 9a90a45dd4413c54c8723a89dd5e2768, type: 3}
-  comparisonThreshold: 0.1
+  comparisonThreshold: 0.01
   resolutionFactor: 1.5
   scoreText: {fileID: 1484340710}
 --- !u!4 &1475603681
