@@ -42,12 +42,12 @@ public class UIManager : MonoBehaviour
     {
         if (_activeButton != null)
         {
-            _activeButton.GetComponentInChildren<TMP_Text>().text = _activeButton.name;
+            //_activeButton.GetComponentInChildren<TMP_Text>().text = _activeButton.name;
             _activeButton.image.color = defaultColor;
         }
 
         _activeButton = button;
-        _activeButton.GetComponentInChildren<TMP_Text>().text = buttonText;
+      //  _activeButton.GetComponentInChildren<TMP_Text>().text = buttonText;
         _activeButton.image.color = activeColor;
 
         action.Invoke();
