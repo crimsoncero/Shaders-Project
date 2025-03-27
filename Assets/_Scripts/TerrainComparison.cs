@@ -10,11 +10,13 @@ public class TerrainComparison : MonoBehaviour
     [SerializeField] private Texture2D _targetColorMap;
     [SerializeField] private float comparisonThreshold = 0.1f;
     [SerializeField] private float resolutionFactor = 1.0f;
-    [SerializeField] private TMP_Text scoreText; // Reference to the UI Text
+    [SerializeField] private TMP_Text scoreText;
 
     public void CompareAndDisplayScore()
     {
         float score = CompareTerrains();
+        if (score > 1) score = 1;
+        else if (score < 0) score = 0;
         scoreText.text = "Score: " + (score * 100).ToString("F2") + "%";
     }
 

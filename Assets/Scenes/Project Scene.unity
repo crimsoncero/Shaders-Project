@@ -1310,7 +1310,7 @@ Transform:
   m_GameObject: {fileID: 957077280}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 24.78, z: -0.13}
+  m_LocalPosition: {x: 0, y: 0, z: -0.13}
   m_LocalScale: {x: 19.8, y: 19.8, z: 19.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2528,7 +2528,7 @@ MonoBehaviour:
   _targetHeightMap: {fileID: 2800000, guid: 203883de07772b748816f0733fb5753f, type: 3}
   _targetColorMap: {fileID: 2800000, guid: 9a90a45dd4413c54c8723a89dd5e2768, type: 3}
   comparisonThreshold: 0.1
-  resolutionFactor: 1
+  resolutionFactor: 1.5
   scoreText: {fileID: 1484340710}
 --- !u!4 &1475603681
 Transform:

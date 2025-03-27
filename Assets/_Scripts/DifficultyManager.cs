@@ -18,13 +18,13 @@ public class DifficultyManager : MonoBehaviour
         switch (index)
         {
             case 0: // Easy
-                terrainComparison.SetResolutionFactor(0.5f);
+                terrainComparison.SetResolutionFactor(1.5f);
                 break;
             case 1: // Medium
                 terrainComparison.SetResolutionFactor(1.0f);
                 break;
             case 2: // Hard
-                terrainComparison.SetResolutionFactor(1.5f);
+                terrainComparison.SetResolutionFactor(0.5f);
                 break;
         }
     }
