@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TerrainModifier _terrainModifier;
     [FormerlySerializedAs("moveSpeed")] [SerializeField] private float _moveSpeed = 7.5f;
     [FormerlySerializedAs("lookSpeed")] [SerializeField] private float _lookSpeed = 2.5f;
-    
+    [SerializeField] private UIManager _UImanager;
     
     [FormerlySerializedAs("isControllingCamera")] [SerializeField] private bool _isControllingCamera = false;
     private Vector3 _moveDirection = Vector3.zero;
