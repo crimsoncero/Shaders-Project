@@ -38,6 +38,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        CompareAndDisplayScore();
+    }
+
     private void SetActiveButton(Button button, string buttonText, System.Action action)
     {
         if (_activeButton != null)
